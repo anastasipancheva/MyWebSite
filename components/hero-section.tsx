@@ -5,7 +5,7 @@ import { useEffect, useMemo, useState } from "react"
 const roles = [
   "Programmer",
   "Data Analyst",
-  "ML Engineer",
+  "Beginner ML Engineer",
   "Frontend Developer",
 ]
 
@@ -30,6 +30,8 @@ export function HeroSection() {
   const [roleIndex, setRoleIndex] = useState(0)
   const [displayText, setDisplayText] = useState("")
   const [isDeleting, setIsDeleting] = useState(false)
+  // НОВОЕ: состояние для проверки, загрузился ли клиент
+  const [isMounted, setIsMounted] = useState(false)
 
   const particles = useMemo(
       () =>
@@ -41,6 +43,11 @@ export function HeroSection() {
           })),
       []
   )
+
+  // НОВОЕ: устанавливаем mounted в true после загрузки
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   useEffect(() => {
     const currentRole = roles[roleIndex]
@@ -75,7 +82,8 @@ export function HeroSection() {
       >
         {/* Particle background */}
         <div className="pointer-events-none absolute inset-0">
-          {particles.map((p, i) => (
+          {/* НОВОЕ: рендерим частицы только на клиенте */}
+          {isMounted && particles.map((p, i) => (
               <div
                   key={i}
                   className="absolute h-1 w-1 rounded-full bg-primary/30"
@@ -93,16 +101,20 @@ export function HeroSection() {
           <div className="absolute bottom-20 left-1/2 h-px w-4 bg-primary/40 -translate-x-full" />
         </div>
 
-        {/* Floating code symbols */}
-        <FloatingSymbol className="right-[15%] top-[25%] hidden md:block">
-          {"{ }"}
-        </FloatingSymbol>
-        <FloatingSymbol className="right-[25%] top-[55%] hidden md:block">
-          {"< />"}
-        </FloatingSymbol>
-        <FloatingSymbol className="right-[35%] top-[55%] hidden md:block">
-          {"( )"}
-        </FloatingSymbol>
+        {/* Floating code symbols - тоже скрываем до загрузки, так как они позиционированы абсолютно */}
+        {isMounted && (
+            <>
+              <FloatingSymbol className="right-[15%] top-[25%] hidden md:block">
+                {"{ }"}
+              </FloatingSymbol>
+              <FloatingSymbol className="right-[25%] top-[55%] hidden md:block">
+                {"< />"}
+              </FloatingSymbol>
+              <FloatingSymbol className="right-[35%] top-[55%] hidden md:block">
+                {"( )"}
+              </FloatingSymbol>
+            </>
+        )}
 
         <div className="relative z-10 mx-auto max-w-6xl w-full">
           <div className="max-w-2xl">
