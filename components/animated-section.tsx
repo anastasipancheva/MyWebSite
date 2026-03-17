@@ -6,7 +6,6 @@ import { ReactNode } from "react"
 interface AnimatedSectionProps {
     children: ReactNode
     className?: string
-    // Добавим строковый тип, чтобы он не ругался на старые анимации из других файлов
     animation?: any
     delay?: number
 }
@@ -24,7 +23,6 @@ export function AnimatedSection({
         "scale-in": { initial: { opacity: 0, scale: 0.9 }, animate: { opacity: 1, scale: 1 } },
     }
 
-    // Если пришло название анимации, которой нет в списке, берем "fade-in-up"
     const selectedVariant = variants[animation as keyof typeof variants] || variants["fade-in-up"];
 
     return (

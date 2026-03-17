@@ -14,8 +14,8 @@ const jetbrains = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Anastasia Pancheva | Programmer & ML Engineer',
-  description: 'Personal portfolio of Anastasia Pancheva - Programmer, Data Analyst, ML Engineer',
+  title: 'Anastasia Pancheva',
+  description: 'Personal portfolio of Anastasia Pancheva - System Analyst, Frontend Developer',
 }
 
 export const viewport: Viewport = {

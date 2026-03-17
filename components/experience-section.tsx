@@ -21,11 +21,11 @@ const experiences: ExperienceItem[] = [
   },
   {
     company: "TutorHub",
-    role: "Fullstack Developer",
+    role: "Frontend Developer",
     period: "2025",
     description:
       "Разработка платформы-галереи репетиторов с возможностью просмотра информации, покупки курсов и записи на занятия. TypeScript + React + Next.js.",
-    tags: ["React", "Next.js", "TypeScript", "Full Stack"],
+    tags: ["React", "Next.js", "TypeScript"],
   },
   {
     company: "Data Analysis Research",
@@ -43,6 +43,14 @@ const experiences: ExperienceItem[] = [
       "Разработка сайта студии йоги и пилатеса на чистом HTML, CSS и JavaScript. Адаптивная верстка и плавные анимации.",
     tags: ["HTML", "CSS", "JavaScript", "Frontend"],
   },
+  {
+    company: "ScoreHub",
+    role: "System Analyst",
+    period: "2026",
+    description:
+        "Первичное проектирование документации для проекта ScoreHub. Работа в стартапе. Описание с помощью BPMN, UML, Use Case, User Story, Диграммы классов.",
+    tags: ["UML", "BPMN", "UseCase", "SOAP", "UserStory"],
+  },
 ]
 
 export function ExperienceSection() {
@@ -59,9 +67,9 @@ export function ExperienceSection() {
           <p className="text-muted-foreground">My Professional Journey</p>
         </AnimatedSection>
 
-        {/* Timeline */}
+        {}
         <div className="relative">
-          {/* Vertical line */}
+          {}
           <div className="absolute left-1/2 top-0 hidden h-full w-0.5 -translate-x-1/2 bg-primary/20 md:block" />
           <div className="absolute left-6 top-0 h-full w-0.5 bg-primary/20 md:hidden" />
 
@@ -75,9 +83,9 @@ export function ExperienceSection() {
                   delay={i * 150}
                 >
                   <div className="relative flex items-center gap-8 md:gap-0">
-                    {/* Mobile layout */}
+                    {}
                     <div className="md:hidden pl-14 w-full">
-                      {/* Dot on the line */}
+                      {}
                       <div className="absolute left-[18px] top-6 h-4 w-4 rounded-full border-4 border-primary bg-background z-10" />
                       
                       <div className="group rounded-2xl border border-border/30 bg-card p-6 transition-all duration-500 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1">
@@ -109,9 +117,9 @@ export function ExperienceSection() {
                       </div>
                     </div>
 
-                    {/* Desktop layout */}
+                    {}
                     <div className="hidden md:flex w-full items-center">
-                      {/* Left side */}
+                      {}
                       <div className="w-[calc(50%-2rem)] pr-8">
                         {isLeft ? (
                           <div className="group rounded-2xl border border-border/30 bg-card p-6 transition-all duration-500 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1">
@@ -147,12 +155,12 @@ export function ExperienceSection() {
                         )}
                       </div>
 
-                      {/* Center dot */}
+                      {}
                       <div className="relative flex h-16 w-16 flex-shrink-0 items-center justify-center">
                         <div className="h-4 w-4 rounded-full border-4 border-primary bg-background z-10" />
                       </div>
 
-                      {/* Right side */}
+                      {}
                       <div className="w-[calc(50%-2rem)] pl-8">
                         {!isLeft ? (
                           <div className="group rounded-2xl border border-border/30 bg-card p-6 transition-all duration-500 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1">

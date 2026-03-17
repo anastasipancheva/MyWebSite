@@ -2,7 +2,7 @@
 
 import { AnimatedSection } from "./animated-section"
 import { Github, Send } from "lucide-react"
-import Image from "next/image" // Импортируем компонент для картинок
+import Image from "next/image"
 
 export function AboutSection() {
   return (
@@ -24,7 +24,7 @@ export function AboutSection() {
                 {"Я аналитик и разработчик с опытом в создании комплексных программных решений. Специализируюсь на анализе данных, начинаю свой путь в машинном обучении, а также для себя занимаюсь веб-разработкой и проектированием баз данных."}
               </p>
               <p className="leading-relaxed text-muted-foreground">
-                {"Мой опыт включает исследование покупательского поведения, разработку ML-моделей, создание веб-платформ на React/Next.js, проетирование собственной БД и реализация её на MySQL. Люблю решать сложные задачи и анализировать большие объёмы данных."}
+                {"Мой опыт включает исследование покупательского поведения, разработку ML-моделей, создание веб-платформ на React/Next.js, проектирование собственной БД и реализация её на MySQL. Люблю решать сложные задачи и анализировать большие объёмы данных."}
               </p>
 
               <div className="flex flex-wrap gap-4 pt-4">
@@ -71,11 +71,11 @@ export function AboutSection() {
             >
               <div className="relative h-72 w-72 overflow-hidden rounded-2xl border border-border/30 lg:h-80 lg:w-80 shadow-2xl shadow-primary/10">
                 <Image
-                    src="/me.jpg"           // Путь к фото в public
+                    src="/me.jpg"
                     alt="Anastasia Pancheva"
-                    fill                   // Заполнит контейнер div
+                    fill
                     className="object-cover transition-transform duration-500 hover:scale-105"
-                    priority               // Загружать в первую очередь
+                    priority
                 />
               </div>
             </AnimatedSection>

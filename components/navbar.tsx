@@ -57,7 +57,7 @@ export function Navbar() {
           {"Anastasia"} <span className="text-primary">{"Dev"}</span>
         </a>
 
-        {/* Desktop Nav */}
+        {}
         <div className="hidden items-center gap-1 md:flex">
           {navLinks.map((link) => (
             <a
@@ -78,7 +78,7 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* Mobile Toggle */}
+        {}
         <button
           className="text-foreground transition-colors duration-300 hover:text-primary md:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -88,7 +88,7 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Nav */}
+      {}
       <div
         className={cn(
           "overflow-hidden transition-all duration-500 md:hidden",

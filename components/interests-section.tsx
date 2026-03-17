@@ -1,6 +1,6 @@
 "use client"
 
-import { AnimatedSection } from "./animated-section" // Убедись, что файл animated-section.tsx обновлен (код ниже)
+import { AnimatedSection } from "./animated-section"
 import { Crown, Music, Layers, BookOpen, Coffee, Gamepad2 } from "lucide-react"
 import type { LucideIcon } from "lucide-react"
 

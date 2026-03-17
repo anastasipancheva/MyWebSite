@@ -46,6 +46,15 @@ const projects: Project[] = [
     tags: ["HTML", "CSS", "JavaScript", "Frontend"],
     githubUrl: "https://github.com/anastasipancheva/frontend",
   },
+  {
+    title: "ScoreHub",
+    description:
+        "Первичное проектирование документации для проекта ScoreHub. Работа в стартапе. Описание с помощью BPMN, UML, Use Case, User Story, Диграммы классов.",
+    image: "/scorehub.jpg",
+    tags: ["UML", "BPMN", "UseCase", "SOAP", "UserStory"],
+    githubUrl: "https://github.com/anastasipancheva/scorehub",
+
+  },
 ]
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {

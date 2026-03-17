@@ -3,9 +3,7 @@
 import { useEffect, useMemo, useState } from "react"
 
 const roles = [
-  "Programmer",
-  "Data Analyst",
-  "Beginner ML Engineer",
+  "System Analyst",
   "Frontend Developer",
 ]
 
@@ -30,7 +28,6 @@ export function HeroSection() {
   const [roleIndex, setRoleIndex] = useState(0)
   const [displayText, setDisplayText] = useState("")
   const [isDeleting, setIsDeleting] = useState(false)
-  // НОВОЕ: состояние для проверки, загрузился ли клиент
   const [isMounted, setIsMounted] = useState(false)
 
   const particles = useMemo(
@@ -44,7 +41,6 @@ export function HeroSection() {
       []
   )
 
-  // НОВОЕ: устанавливаем mounted в true после загрузки
   useEffect(() => {
     setIsMounted(true)
   }, [])
@@ -80,9 +76,9 @@ export function HeroSection() {
           id="home"
           className="relative flex min-h-screen items-center overflow-hidden px-6"
       >
-        {/* Particle background */}
+        {}
         <div className="pointer-events-none absolute inset-0">
-          {/* НОВОЕ: рендерим частицы только на клиенте */}
+          {}
           {isMounted && particles.map((p, i) => (
               <div
                   key={i}
@@ -95,13 +91,13 @@ export function HeroSection() {
                   }}
               />
           ))}
-          {/* Grid lines */}
+          {}
           <div className="absolute left-1/2 top-0 h-full w-px bg-primary/10" />
           <div className="absolute bottom-20 left-1/2 h-4 w-px bg-primary/40" />
           <div className="absolute bottom-20 left-1/2 h-px w-4 bg-primary/40 -translate-x-full" />
         </div>
 
-        {/* Floating code symbols - тоже скрываем до загрузки, так как они позиционированы абсолютно */}
+        {}
         {isMounted && (
             <>
               <FloatingSymbol className="right-[15%] top-[25%] hidden md:block">
@@ -147,3 +143,4 @@ export function HeroSection() {
       </section>
   )
 }
+
