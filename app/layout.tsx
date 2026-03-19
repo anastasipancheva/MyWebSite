@@ -16,6 +16,11 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'Anastasia Pancheva',
   description: 'Personal portfolio of Anastasia Pancheva - System Analyst, Frontend Developer',
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/icon.png',
+    apple: '/icon.png',
+  },
 }
 
 export const viewport: Viewport = {
