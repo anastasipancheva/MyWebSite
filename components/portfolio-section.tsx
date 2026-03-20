@@ -39,6 +39,14 @@ const projects: Project[] = [
     githubUrl: "https://github.com/anastasipancheva/AnyWay",
   },
   {
+    title: "Car Shool Data Base",
+    description:
+        "Создание отказоустойчивой структуры данных, минимизирующей влияние человеческого фактора при распределении ресурсов и контроле учебного прогресса.",
+    image: "/ERD.png",
+    tags: ["ERD", "SQL", "DataBase"],
+    githubUrl: "https://github.com/anastasipancheva/CarSchoolDataBase",
+  },
+  {
     title: "Balance - Yoga & Pilates",
     description:
       "Сайт студии йоги и пилатеса с информацией о направлениях, тренерах и залах. Выполнен на чистейшем HTML, CSS и JavaScript с красивыми анимациями.",

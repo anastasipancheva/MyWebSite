@@ -36,6 +36,14 @@ const experiences: ExperienceItem[] = [
     tags: ["Python", "Pandas", "ML", "Data Analysis"],
   },
   {
+    company: "Car Shool Data Base",
+    role: "Data Analyst, Database designer",
+    period: "2025",
+    description:
+        "Создание отказоустойчивой структуры данных, минимизирующей влияние человеческого фактора при распределении ресурсов и контроле учебного прогресса.",
+    tags: ["ERD", "SQL", "DataBase"],
+  },
+  {
     company: "Balance Studio",
     role: "Frontend Developer",
     period: "2025",
